@@ -1,0 +1,69 @@
+ * {
+    padding: 0; 
+    margin: 0;
+}
+
+main {
+    /* como o menu ocupa 10vh, este tem 90vh para o vermo inteiro. */
+    height: 80vh;
+    background-image: url(images/AI_robot.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+
+main > p {
+    font-size: 3rem;
+    padding-top: 40vh;
+    padding-left: 10px;
+    color: white;
+}
+
+article.primeiro {
+    /* definindo altura e cor */
+    height: 50vh;
+    background: #28282B;
+    color: white;
+    padding: 0 4vw;
+    text-align: center;
+    font-size: 2rem;
+}
+
+
+article.segundo {
+    height: 80vh;
+    background-image: url(images/AI_robot.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    align-items: start;
+}
+
+.personal-div {
+    text-align: center;
+}
+
+.personal-presentation {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+  
+.personal-picture {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-image: url(images/techie_guy.png);
+    background-size: cover;
+    background-position: center;
+    display: inline-block;
+    margin-top: 20px;
+ }
+  
+.personal-presentation p {
+    margin: 20px;
+    flex-grow: 1;
+}

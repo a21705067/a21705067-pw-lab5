@@ -1,0 +1,95 @@
+/* Default styles for the menu */
+nav ul,
+nav li,
+nav a {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center; 
+  align-items: center;
+  position: relative;
+  background-color: black;
+  box-shadow: 0 2px 3px rgba(0,0,0,0.1);
+}
+
+nav ul li {
+  display: block;
+  position: relative;
+  background-color: black;
+}
+
+/* Top-level menu links */
+nav ul li a {
+  display: block;
+  padding: 1em;
+  color: white;
+  font-size: 1.1em;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s ease-out;
+}
+
+/* Change color on hover */
+nav ul li a:hover {
+  color: white;
+  background-color: darkgray;
+  content: "▸";
+}
+
+/* Sub-menu */
+nav ul ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: black;
+  box-shadow: 0 2px 3px rgba(0,0,0,0.1);
+  white-space: nowrap;
+}
+
+nav ul li:hover > ul {
+  display: inherit;
+}
+
+nav ul ul li {
+  width: 100%;
+}
+
+nav ul ul li a {
+  display: block;
+  padding: 0.5em 1em;
+  color: white;
+  font-size: 1em;
+  text-decoration: none;
+}
+
+nav ul ul li a:hover {
+  color: black;
+}
+
+nav ul ul ul {
+  left: 100%;
+  top: 0;
+}
+
+/* Arrows to indicate sub-menu */
+nav ul li > a:after {
+  content: "▾";
+}
+
+nav ul li > a:only-child:after {
+  content: "";
+}
+
+ footer {
+    background: black;
+    color: white;
+    text-align: center;
+    font-size: 1em;
+  }
