@@ -87,9 +87,9 @@ nav ul li > a:only-child:after {
   content: "";
 }
 
- footer {
-    background: black;
-    color: white;
-    text-align: center;
-    font-size: 1em;
-  }
+footer {
+  background: black;
+  color: white;
+  text-align: center;
+  font-size: 1em;
+}
