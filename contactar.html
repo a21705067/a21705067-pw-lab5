@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Tiago Portfolio</title>
+    <meta name="author" content="Tiago Guerra">
+    <meta name="description" content="O meu portfolio">
+    <link rel="stylesheet" href="geral.css">
+    <link rel="stylesheet" href="contactar.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/4e6cbf3d2b.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <header>
+        <nav>
+            <ul>
+              <li><a href="home.html">Home</a></li>
+              <li><a href="#">Sobre mim</a>
+                <ul>
+                  <li><a href="#">Licenciatura</a>
+                    <ul>
+                      <li><a href="#">Cadeiras</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#">Educação</a></li>
+                    <ul>
+                        <li><a href="#">Escolas</a></li>
+                    </ul>
+                  <li><a href="#">Aptidões e competências pessoais</a>
+                    <ul>
+                        <li><a href="#">Técnicas</a></li>
+                        <li><a href="#">Organizativas</a></li>
+                        <li><a href="#">Sociais</a></li>
+                        <li><a href="#">Linguísticas</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#">Interesses e hobbies</a></li> 
+                  <li><a href="#">Experiência profissional</a></li>  
+                </ul>
+              </li>
+              <li><a href="#">Projetos</a>
+                <ul>
+                    <li><a href="#">Realizados em diversas UCs</a></li>
+                    <li><a href="#">Realizados por mim</a></li>
+                    <li><a href="#">Realizados para fim de curso</a></li>  
+                </ul>
+              </li>  
+              <li><a href="#">Programação Web</a>
+                <ul>
+                    <li><a href="#">Tecnologias Existentes</a>
+                        <ul>
+                            <li><a href="frontend.html">Front-end</a></li>
+                            <li><a href="backend.html">Back-end</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Laboratórios</a>
+                      <ul>
+                        <li><a href="#">Lab 1</a></li>
+                        <li><a href="#">Lab 2</a></li>
+                        <li><a href="#">Lab 3</a></li>
+                        <li><a href="#">Lab 4</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="#">Notícias</a></li>
+                </ul>    
+              </li>
+            <li><a href="#">Blog</a></li>
+            </ul>
+          </nav>
+      </header>
+
+    <main>
+        <div class="container">
+            <form id="form-contato">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="mensagem">Mensagem:</label>
+                <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+                <div class="botao-enviar">
+                    <input type="submit" value="Enviar">
+                </div>
+                <div class="mensagens">
+                    <div class="mensagem mensagem-enviada" style="display:none;">Mensagem enviada com sucesso!</div>
+                    <div class="mensagem erro-envio" style="display:none;">Ocorreu um erro ao enviar a mensagem. Por favor, tente novamente mais tarde.</div>
+                </div>
+            </form>
+        </div>
+        <!-- <script src="enviar-email.js"></script> -->
+    </main>
+    
+    <footer class="footer">
+      <div class="waves">
+        <div class="wave" id="wave1"></div>
+        <div class="wave" id="wave2"></div>
+        <div class="wave" id="wave3"></div>
+        <div class="wave" id="wave4"></div>
+      </div>
+      <ul class="social-icon">
+        <li class="social-icon__item"><a class="social-icon__link" href="https://www.twitter.com">
+          <i class="fa-brands fa-twitter"></i>
+          </a></li>
+        <li class="social-icon__item"><a class="social-icon__link" href="https://www.linkedin.com/in/tiago-guerra-6b911815a/">
+          <i class="fa-brands fa-linkedin"></i>
+          </a></li>
+        <li class="social-icon__item"><a class="social-icon__link" href="https://www.instagram.com">
+          <i class="fa-brands fa-instagram"></i>
+          </a></li>
+        <li class="social-icon__item"><a class="social-icon__link" href="https://www.facebook.com">
+          <i class="fa-brands fa-facebook"></i>
+          </a></li>  
+      </ul>
+      <ul class="menu">
+        <li class="menu__item"><a class="menu__link" href="#">Sobre</a></li>
+        <li class="menu__item"><a class="menu__link" href="contactos.html">Contactar</a></li>
+  
+      </ul>
+      <p>&copy;2023 Tiago Guerra | Universidade Lusófona</p>
+    </footer>
+  </body>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var form = document.getElementById("form-contato");
+        form.addEventListener("submit", function(event) {
+        event.preventDefault(); // Previne o envio padrão do formulário
+        var nome = document.getElementById("nome").value;
+        var email = document.getElementById("email").value;
+        var mensagem = document.getElementById("mensagem").value;
+        var xhr = new XMLHttpRequest(); // Cria um objeto XMLHttpRequest
+        xhr.open("POST", "enviar-email.php", true); // Define o método e o arquivo PHP para enviar o e-mail
+        xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded"); // Define o cabeçalho HTTP para enviar dados de formulário
+        xhr.onreadystatechange = function() {
+            if (xhr.readyState === 4) { // Verifica se a solicitação foi concluída
+                if (xhr.status === 200) { // Verifica se a solicitação foi concluída com sucesso
+                    var resposta = xhr.responseText; // Obtém a resposta do servidor
+                    if (resposta === "enviado") { // Verifica se o e-mail foi enviado com sucesso
+                        document.querySelector(".mensagem-enviada").style.display = "block"; // Exibe a mensagem de envio bem-sucedido
+                        form.reset(); // Limpa o formulário
+                    } else {
+                        document.querySelector(".erro-envio").style.display = "block"; // Exibe a mensagem de erro de envio
+                    }
+                } else {
+                    console.log("Erro ao enviar o formulário: " + xhr.status); // Exibe o código de status da solicitação
+                }
+            }
+        };
+        xhr.send("nome=" + encodeURIComponent(nome) + "&email=" + encodeURIComponent(email) + "&mensagem=" + encodeURIComponent(mensagem)); // Envia os dados do formulário para o arquivo PHP
+    });
+    });
+  </script>
+</html>
