@@ -6,7 +6,7 @@
 main {
     /* como o menu ocupa 10vh, este tem 90vh para o vermo inteiro. */
     height: 80vh;
-    background-image: url(images/mailbox.png);
+    background-image: url(/images/mailbox.png);
     background-position: center;
 }
 

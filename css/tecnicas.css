@@ -6,7 +6,7 @@
 main {
     /* como o menu ocupa 10vh, este tem 90vh para o vermo inteiro. */
     height: 80vh;
-    background-image: url(images/under_construction.jpg);
+    background-image: url(/images/under_construction.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
