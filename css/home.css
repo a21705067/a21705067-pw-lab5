@@ -1,11 +1,10 @@
- * {
+* {
     padding: 0; 
     margin: 0;
 }
 
-main {
+body {
     /* como o menu ocupa 10vh, este tem 90vh para o vermo inteiro. */
-    height: 80vh;
     background-image: url(/images/AI_robot.png);
     background-repeat: no-repeat;
     background-position: center;
@@ -13,19 +12,21 @@ main {
     background-attachment: fixed;
 }
 
+main {
+    height: 100%;
+}
 
 main > p {
     font-size: 3rem;
     padding-top: 40vh;
     padding-left: 10px;
+    margin-bottom: 20vh;
     color: white;
 }
 
 article.primeiro {
     /* definindo altura e cor */
     height: 50vh;
-    background: #28282B;
-    color: white;
     padding: 0 4vw;
     text-align: center;
     font-size: 2rem;

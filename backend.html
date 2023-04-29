@@ -3,123 +3,155 @@
 <head>
     <meta charset="UTF-8">
     <meta name="author" content="Tiago Guerra">
-    <meta name="description" content="Licenciatura > Cadeiras">
-    <link rel="stylesheet" href="css/geral.css">
+    <meta name="description" content="Portfolio">
+    <link rel="stylesheet" href="css/geral-light.css">
     <link rel="stylesheet" href="css/backend.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <script src="https://kit.fontawesome.com/4e6cbf3d2b.js" crossorigin="anonymous"></script>
-    <title>Licenciatura > Cadeiras</title>
+    <title>Backend</title>
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-              <li><a href="home.html">Home</a></li>
-              <li><a href="#">Sobre mim</a>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a>Sobre mim</a>
+          <ul>
+            <li><a>Licenciatura</a>
+              <ul>
+                <li><a href="cadeiras.html">Cadeiras</a></li>
+              </ul>
+            </li>
+            <li><a>Educação</a>
+              <ul>
+                  <li><a href="wip.html">Escolas</a></li>
+              </ul>
+            </li>  
+            <li><a>Aptidões e competências pessoais</a>
+              <ul>
+                <li><a href="wip.html">Técnicas</a></li>
+                <li><a href="wip.html">Organizativas</a></li>
+                <li><a href="wip.html">Sociais</a></li>
+                <li><a href="wip.html">Linguísticas</a></li>
+              </ul>
+            </li>
+            <li><a href="hobbies.html">Interesses e hobbies</a></li> 
+            <li><a href="wip.html">Experiência profissional</a></li>  
+          </ul>
+        </li>
+        <li><a href="projetos.html">Projetos</a></li>  
+        <li><a>Programação Web</a>
+          <ul>
+              <li><a>Tecnologias Existentes</a>
                 <ul>
-                  <li><a href="#">Licenciatura</a>
-                    <ul>
-                      <li><a href="cadeiras.html">Cadeiras</a></li>
-                    </ul>
-                  </li>
-                  <li><a href="#">Educação</a></li>
-                    <ul>
-                        <li><a href="#">Escolas</a></li>
-                    </ul>
-                  <li><a href="#">Aptidões e competências pessoais</a>
-                    <ul>
-                        <li><a href="#">Técnicas</a></li>
-                        <li><a href="#">Organizativas</a></li>
-                        <li><a href="#">Sociais</a></li>
-                        <li><a href="#">Linguísticas</a></li>
-                    </ul>
-                  </li>
-                  <li><a href="#">Interesses e hobbies</a></li> 
-                  <li><a href="#">Experiência profissional</a></li>  
+                  <li><a href="frontend.html">Front-end</a></li>
+                  <li><a href="backend.html">Back-end</a></li>
                 </ul>
               </li>
-              <li><a href="#">Projetos</a>
+              <li><a>Laboratórios</a>
                 <ul>
-                    <li><a href="#">Realizados em diversas UCs</a></li>
-                    <li><a href="#">Realizados por mim</a></li>
-                    <li><a href="#">Realizados para fim de curso</a></li>  
-                </ul>
-              </li>  
-              <li><a href="#">Programação Web</a>
-                <ul>
-                    <li><a href="#">Tecnologias Existentes</a>
-                        <ul>
-                            <li><a href="frontend.html">Front-end</a></li>
-                            <li><a href="backend.html">Back-end</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#">Laboratórios</a>
-                        <ul>
-                          <li><a href="#">Lab 1</a></li>
-                          <li><a href="#">Lab 2</a></li>
-                          <li><a href="#">Lab 3</a></li>
-                          <li><a href="#">Lab 4</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#">Notícias</a></li>
-                </ul>    
+                  <li><a href="http://a21705067.pythonanywhere.com/" target="_blank">Lab 1</a></li>
+                  <li><a href="https://a21705067.pythonanywhere.com/a21705067-pw-lab2/" target="_blank">Lab 2</a></li>
+                  <li><a href="https://a21705067.pythonanywhere.com/a21705067-pw-lab3/" target="_blank">Lab 3</a></li>
+                  <li><a href="https://a21705067.pythonanywhere.com/a21705067-pw-lab4/" target="_blank">Lab 4</a></li>
+              </ul>
               </li>
-            <li><a href="#">Blog</a></li>
-            </ul>
-          </nav>
-      </header>
-    <main>
-        <h1>FrontEnd</h1>
+              <li><a href="playground.html">Javascript Playground</a></li>
+          </ul>    
+        </li>
+      <li><a href="wip.html">Blog</a></li>
+      </ul>
+      <div class="toggle-container">
+        <label class="toggle">
+          <input type="checkbox" id="mode-toggle">
+          <span class="slider"></span>
+          <span class="icon sun"><i class="fas fa-sun"></i></span>
+          <span class="icon moon"><i class="fas fa-moon"></i></span>
+        </label>
+      </div>
+    </nav>  
+  </header>
 
-        <table>
-            <thead>
-                <tr class="header-tr">
-                    <th>Linguagem</th>
-                    <th>Descrição</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                  <td>Python</td>
-                  <td>Python é uma linguagem de programação de alto nível, interpretada e orientada a objetos. Uma das características distintivas é sua abordagem minimalista em relação à escrita de código.<br> É uma linguagem versátil que pode ser usada em uma variedade de aplicações, incluindo ciência de dados, inteligência artificial, desenvolvimento web, automação de tarefas, entre outras.</td>
-                </tr>
-                <tr>
-                  <td>Django</td>
-                  <td>Django é um framework web em Python de alto nível, gratuito e de código aberto, usado para desenvolver aplicativos da web rapidamente.<br>É baseado em padrões de design comuns, como Model-View-Controller (MVC) e Model-View-Template (MVT), o que o torna fácil de aprender e usar para os desenvolvedores. Foi construído em torno do conceito de "batteries-included" (baterias incluídas), o que significa que ele vem com uma grande variedade de bibliotecas e recursos integrados que podem ser usados para desenvolver aplicativos da web completos com muito menos esforço.</td>
+  <main>
+      <h1>Backend</h1>
+
+      <table class="tabela1ano">
+          <thead>
+              <tr class="header-tr">
+                  <th>Linguagem</th>
+                  <th>Descrição</th>
               </tr>
-            </tbody>
-        </table>    
-    </main>
+          </thead>
+          <tbody>
+              <tr>
+                <td>Python</td>
+                <td>Python é uma linguagem de programação de alto nível, interpretada e orientada a objetos. Uma das características distintivas é sua abordagem minimalista em relação à escrita de código.<br> É uma linguagem versátil que pode ser usada em uma variedade de aplicações, incluindo ciência de dados, inteligência artificial, desenvolvimento web, automação de tarefas, entre outras.</td>
+              </tr>
+              <tr>
+                <td>Django</td>
+                <td>Django é um framework web em Python de alto nível, gratuito e de código aberto, usado para desenvolver aplicativos da web rapidamente.<br>É baseado em padrões de design comuns, como Model-View-Controller (MVC) e Model-View-Template (MVT), o que o torna fácil de aprender e usar para os desenvolvedores. Foi construído em torno do conceito de "batteries-included" (baterias incluídas), o que significa que ele vem com uma grande variedade de bibliotecas e recursos integrados que podem ser usados para desenvolver aplicativos da web completos com muito menos esforço.</td>
+            </tr>
+          </tbody>
+      </table>    
+  </main>
 
-    <footer class="footer">
-        <div class="waves">
-            <div class="wave" id="wave1"></div>
-            <div class="wave" id="wave2"></div>
-            <div class="wave" id="wave3"></div>
-            <div class="wave" id="wave4"></div>
-        </div>
-        <ul class="social-icon">
-            <li class="social-icon__item"><a class="social-icon__link" href="https://www.twitter.com">
-            <i class="fa-brands fa-twitter"></i>
-            </a></li>
-            <li class="social-icon__item"><a class="social-icon__link" href="https://www.linkedin.com/in/tiago-guerra-6b911815a/">
-            <i class="fa-brands fa-linkedin"></i>
-            </a></li>
-            <li class="social-icon__item"><a class="social-icon__link" href="https://www.instagram.com">
-            <i class="fa-brands fa-instagram"></i>
-            </a></li>
-            <li class="social-icon__item"><a class="social-icon__link" href="https://www.facebook.com">
-            <i class="fa-brands fa-facebook"></i>
-            </a></li>  
-        </ul>
-        <ul class="menu">
-            <li class="menu__item"><a class="menu__link" href="#">Sobre</a></li>
-            <li class="menu__item"><a class="menu__link" href="contactar.html">Contactar</a></li>
-        </ul>
-        <p>&copy;2023 Tiago Guerra | Universidade Lusófona</p>
-    </footer>
+  <footer class="footer">
+      <div class="waves">
+          <div class="wave" id="wave1"></div>
+          <div class="wave" id="wave2"></div>
+          <div class="wave" id="wave3"></div>
+          <div class="wave" id="wave4"></div>
+      </div>
+      <ul class="social-icon">
+          <li class="social-icon__item"><a class="social-icon__link" href="https://www.twitter.com">
+          <i class="fa-brands fa-twitter"></i>
+          </a></li>
+          <li class="social-icon__item"><a class="social-icon__link" href="https://www.linkedin.com/in/tiago-guerra-6b911815a/">
+          <i class="fa-brands fa-linkedin"></i>
+          </a></li>
+          <li class="social-icon__item"><a class="social-icon__link" href="https://www.instagram.com">
+          <i class="fa-brands fa-instagram"></i>
+          </a></li>
+          <li class="social-icon__item"><a class="social-icon__link" href="https://www.facebook.com">
+          <i class="fa-brands fa-facebook"></i>
+          </a></li>  
+      </ul>
+      <ul class="menu">
+          <li class="menu__item"><a class="menu__link" href="#">Sobre</a></li>
+          <li class="menu__item"><a class="menu__link" href="contactar.html">Contactar</a></li>
+      </ul>
+      <p>&copy;2023 Tiago Guerra | Universidade Lusófona</p>
+  </footer>
 </body>
+<script>
+    const modeSwitch = document.getElementById('mode-toggle');
+    const linkElement = document.querySelector('link[href="css/geral-light.css"]');
+
+    // Verifica se há escolha armazenada no localStorage
+    const mode = localStorage.getItem('mode');
+    if (mode === 'dark') {
+      linkElement.setAttribute('href', 'css/geral-dark.css');
+      modeSwitch.checked = true;
+    }
+
+    modeSwitch.addEventListener('click', () => {
+      if (linkElement.getAttribute('href') === 'css/geral-light.css') {
+        linkElement.setAttribute('href', 'css/geral-dark.css');
+        localStorage.setItem('mode', 'dark');
+      } else {
+        linkElement.setAttribute('href', 'css/geral-light.css');
+        localStorage.setItem('mode', 'light');
+      }
+    });
+
+    window.addEventListener('load', function() {
+      var labLinks = document.querySelectorAll('#laboratorios a');
+      for (var i = 0; i < labLinks.length; i++) {
+        labLinks[i].setAttribute('target', '_blank');
+      }
+    });
+</script>
 </html>

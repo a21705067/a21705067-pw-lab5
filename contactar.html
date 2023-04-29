@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <title>Tiago Portfolio</title>
     <meta name="author" content="Tiago Guerra">
-    <meta name="description" content="O meu portfolio">
-    <link rel="stylesheet" href="css/geral.css">
+    <meta name="description" content="Portfolio">
+    <link rel="stylesheet" href="css/geral-light.css">
     <link rel="stylesheet" href="css/contactar.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,64 +15,68 @@
   </head>
   <body>
     <header>
-        <nav>
+      <nav>
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a>Sobre mim</a>
             <ul>
-              <li><a href="home.html">Home</a></li>
-              <li><a href="#">Sobre mim</a>
+              <li><a>Licenciatura</a>
                 <ul>
-                  <li><a href="#">Licenciatura</a>
-                    <ul>
-                      <li><a href="#">Cadeiras</a></li>
-                    </ul>
-                  </li>
-                  <li><a href="#">Educação</a></li>
-                    <ul>
-                        <li><a href="#">Escolas</a></li>
-                    </ul>
-                  <li><a href="#">Aptidões e competências pessoais</a>
-                    <ul>
-                        <li><a href="#">Técnicas</a></li>
-                        <li><a href="#">Organizativas</a></li>
-                        <li><a href="#">Sociais</a></li>
-                        <li><a href="#">Linguísticas</a></li>
-                    </ul>
-                  </li>
-                  <li><a href="#">Interesses e hobbies</a></li> 
-                  <li><a href="#">Experiência profissional</a></li>  
+                  <li><a href="cadeiras.html">Cadeiras</a></li>
                 </ul>
               </li>
-              <li><a href="#">Projetos</a>
+              <li><a>Educação</a>
                 <ul>
-                    <li><a href="#">Realizados em diversas UCs</a></li>
-                    <li><a href="#">Realizados por mim</a></li>
-                    <li><a href="#">Realizados para fim de curso</a></li>  
+                    <li><a href="wip.html">Escolas</a></li>
                 </ul>
               </li>  
-              <li><a href="#">Programação Web</a>
+              <li><a>Aptidões e competências pessoais</a>
                 <ul>
-                    <li><a href="#">Tecnologias Existentes</a>
-                        <ul>
-                            <li><a href="frontend.html">Front-end</a></li>
-                            <li><a href="backend.html">Back-end</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#">Laboratórios</a>
-                      <ul>
-                        <li><a href="#">Lab 1</a></li>
-                        <li><a href="#">Lab 2</a></li>
-                        <li><a href="#">Lab 3</a></li>
-                        <li><a href="#">Lab 4</a></li>
-                      </ul>
-                    </li>
-                    <li><a href="#">Notícias</a></li>
-                </ul>    
+                  <li><a href="wip.html">Técnicas</a></li>
+                  <li><a href="wip.html">Organizativas</a></li>
+                  <li><a href="wip.html">Sociais</a></li>
+                  <li><a href="wip.html">Linguísticas</a></li>
+                </ul>
               </li>
-            <li><a href="#">Blog</a></li>
+              <li><a href="hobbies.html">Interesses e hobbies</a></li> 
+              <li><a href="wip.html">Experiência profissional</a></li>  
             </ul>
-          </nav>
-      </header>
+          </li>
+          <li><a href="projetos.html">Projetos</a></li>  
+          <li><a>Programação Web</a>
+            <ul>
+                <li><a>Tecnologias Existentes</a>
+                  <ul>
+                    <li><a href="frontend.html">Front-end</a></li>
+                    <li><a href="backend.html">Back-end</a></li>
+                  </ul>
+                </li>
+                <li><a>Laboratórios</a>
+                  <ul>
+                    <li><a href="http://a21705067.pythonanywhere.com/" target="_blank">Lab 1</a></li>
+                    <li><a href="https://a21705067.pythonanywhere.com/a21705067-pw-lab2/" target="_blank">Lab 2</a></li>
+                    <li><a href="https://a21705067.pythonanywhere.com/a21705067-pw-lab3/" target="_blank">Lab 3</a></li>
+                    <li><a href="https://a21705067.pythonanywhere.com/a21705067-pw-lab4/" target="_blank">Lab 4</a></li>
+                </ul>
+                </li>
+                <li><a href="playground.html">Javascript Playground</a></li>
+            </ul>    
+          </li>
+        <li><a href="wip.html">Blog</a></li>
+        </ul>
+        <div class="toggle-container">
+          <label class="toggle">
+            <input type="checkbox" id="mode-toggle">
+            <span class="slider"></span>
+            <span class="icon sun"><i class="fas fa-sun"></i></span>
+            <span class="icon moon"><i class="fas fa-moon"></i></span>
+          </label>
+        </div>
+      </nav>  
+    </header>
 
     <main>
+      <h1>Contactar</h1>
         <div class="container">
             <form id="form-contato">
                 <label for="nome">Nome:</label>
@@ -123,33 +127,31 @@
     </footer>
   </body>
   <script>
-    document.addEventListener("DOMContentLoaded", function() {
-        var form = document.getElementById("form-contato");
-        form.addEventListener("submit", function(event) {
-        event.preventDefault(); // Previne o envio padrão do formulário
-        var nome = document.getElementById("nome").value;
-        var email = document.getElementById("email").value;
-        var mensagem = document.getElementById("mensagem").value;
-        var xhr = new XMLHttpRequest(); // Cria um objeto XMLHttpRequest
-        xhr.open("POST", "enviar-email.php", true); // Define o método e o arquivo PHP para enviar o e-mail
-        xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded"); // Define o cabeçalho HTTP para enviar dados de formulário
-        xhr.onreadystatechange = function() {
-            if (xhr.readyState === 4) { // Verifica se a solicitação foi concluída
-                if (xhr.status === 200) { // Verifica se a solicitação foi concluída com sucesso
-                    var resposta = xhr.responseText; // Obtém a resposta do servidor
-                    if (resposta === "enviado") { // Verifica se o e-mail foi enviado com sucesso
-                        document.querySelector(".mensagem-enviada").style.display = "block"; // Exibe a mensagem de envio bem-sucedido
-                        form.reset(); // Limpa o formulário
-                    } else {
-                        document.querySelector(".erro-envio").style.display = "block"; // Exibe a mensagem de erro de envio
-                    }
-                } else {
-                    console.log("Erro ao enviar o formulário: " + xhr.status); // Exibe o código de status da solicitação
-                }
-            }
-        };
-        xhr.send("nome=" + encodeURIComponent(nome) + "&email=" + encodeURIComponent(email) + "&mensagem=" + encodeURIComponent(mensagem)); // Envia os dados do formulário para o arquivo PHP
+    const modeSwitch = document.getElementById('mode-toggle');
+    const linkElement = document.querySelector('link[href="css/geral-light.css"]');
+
+    // Verifica se há escolha armazenada no localStorage
+    const mode = localStorage.getItem('mode');
+    if (mode === 'dark') {
+      linkElement.setAttribute('href', 'css/geral-dark.css');
+      modeSwitch.checked = true;
+    }
+
+    modeSwitch.addEventListener('click', () => {
+      if (linkElement.getAttribute('href') === 'css/geral-light.css') {
+        linkElement.setAttribute('href', 'css/geral-dark.css');
+        localStorage.setItem('mode', 'dark');
+      } else {
+        linkElement.setAttribute('href', 'css/geral-light.css');
+        localStorage.setItem('mode', 'light');
+      }
     });
+
+    window.addEventListener('load', function() {
+      var labLinks = document.querySelectorAll('#laboratorios a');
+      for (var i = 0; i < labLinks.length; i++) {
+        labLinks[i].setAttribute('target', '_blank');
+      }
     });
   </script>
 </html>

@@ -3,9 +3,8 @@
     margin: 0;
 }
 
-main {
+body {
     /* como o menu ocupa 10vh, este tem 90vh para o vermo inteiro. */
-    height: 100vh;
     background-image: url(/images/backend.png);
     background-position: center;
     background-repeat: no-repeat;
@@ -13,6 +12,10 @@ main {
     background-attachment: fixed;
     text-align: center;
     color: white;
+}
+
+main {
+    height: 100vh;
 }
 
 h1 {
@@ -35,7 +38,6 @@ th, td {
     border: 1px solid black;
     padding: 8px;
     text-align: left;
-    color: white;
 }
 
 th {

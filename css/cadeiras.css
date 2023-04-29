@@ -3,9 +3,9 @@
     margin: 0;
 }
 
-main {
+body {
     /* como o menu ocupa 10vh, este tem 90vh para o vermo inteiro. */
-    height: 100vh;
+    height: 100%;
     background-image: url(/images/university_lecture_hall.png);
     background-position: center;
     background-repeat: no-repeat;
@@ -13,13 +13,13 @@ main {
     background-size: cover;
     background-attachment: fixed;
     text-align: center;
-    color: white;
 }
 
 h1 {
     position: absolute;
-    top: 14vh;
+    top: 8vh;
     width: 100%;
+    color: white;
 }
   
 
@@ -27,7 +27,7 @@ th, td {
     border: 1px solid black;
     padding: 8px;
     text-align: left;
-    color: white;
+    /* color: white; */
 }
 
 th {
@@ -47,11 +47,10 @@ table td.aprovado:before {
 
 .tabela1ano, .tabela2ano, .tabela3ano {
     display: inline-block;
-    width: 50wh;
+    min-width: 100px;
     vertical-align: top;
     margin-right: 2%;
-    margin-top: 15vh;
-    background-color: #28282B;
+    margin-top: 10vh;
     opacity: 0.9;
 }
   
