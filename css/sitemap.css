@@ -1,0 +1,12 @@
+* {
+    padding: 0; 
+    margin: 0;
+}
+
+#svg {
+    background-image: url('../images/sitemap.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-top: 20vh;
+    height: 90vh;
+}
