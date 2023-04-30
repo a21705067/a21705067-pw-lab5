@@ -5,7 +5,7 @@
 
 body {
     /* como o menu ocupa 10vh, este tem 90vh para o vermo inteiro. */
-    background-image: url(/images/AI_robot.png);
+    background-image: url('../images/AI_robot.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -35,7 +35,7 @@ article.primeiro {
 
 article.segundo {
     height: 80vh;
-    background-image: url(/images/AI_robot.png);
+    background-image: url('../images/AI_robot.png');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
@@ -57,7 +57,7 @@ article.segundo {
     width: 200px;
     height: 200px;
     border-radius: 50%;
-    background-image: url(/images/techie_guy.png);
+    background-image: url('../images/techie_guy.png');
     background-size: cover;
     background-position: center;
     display: inline-block;

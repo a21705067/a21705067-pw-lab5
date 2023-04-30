@@ -5,7 +5,7 @@
 
 body {
     /* como o menu ocupa 10vh, este tem 90vh para o vermo inteiro. */
-    background-image: url(/images/backend.png);
+    background-image: url('../images/backend.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
