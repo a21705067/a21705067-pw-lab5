@@ -1,5 +1,6 @@
 html, body {
   height: 100%;
+  color: white;
 }
 
 header {
@@ -263,6 +264,21 @@ div {
 .tabela1ano, .tabela2ano, .tabela3ano {
   background-color: #28282B;
   color: white;
+}
+
+form {
+  background-color: #28282B;
+  color: white;
+}
+
+.logotipo {
+  background-image: url(/images/logotipo_dark.jpg);
+  display: inline-block;
+  width: 70px;
+  height: 60px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  vertical-align: middle;
 }
 
 @media screen and (max-width: 600px){
