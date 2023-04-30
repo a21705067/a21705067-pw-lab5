@@ -275,10 +275,6 @@ header {
   }
 
   @media screen and (max-width: 600px){
-    body {
-      font-size: 10px;
-    }
-
     img {
       max-width: 25vh;
       max-height: 25vh;
@@ -289,7 +285,7 @@ header {
     }
 
     .footer {
-      margin-top: 25vh;
+      margin-top: 80vh;
     }
 
   }
